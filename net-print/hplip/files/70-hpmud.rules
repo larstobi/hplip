@@ -1,0 +1,19 @@
+# Udev rules file for HP printer products.
+
+ACTION!="add", GOTO="hpmud_rules_end"
+
+SUBSYSTEM!="usb|usb_device", GOTO="hpmud_rules_end"
+SUBSYSTEM=="usb", ENV{DEVTYPE}!="usb_device" ,GOTO="hpmud_rules_end"
+
+# Check for AiO products (0x03f0xx11).
+ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="??11", GROUP="lp"
+# Check for Photosmart products (0x03f0xx02).
+ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="??02", GROUP="lp"
+# Check for Business Inkjet products (0x03f0xx12).
+ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="??12", GROUP="lp"
+# Check for Deskjet products (0x03f0xx04).
+ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="??04", GROUP="lp"
+# Check for LaserJet products (0x03f0xx17).
+ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="??17", GROUP="lp"
+
+LABEL="hpmud_rules_end"

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+
+  <herd>no-herd</herd>
+
+  <maintainer>
+    <email>larstobi@snota.no</email>
+    <name>Lars Tobias Borsting</name>
+  </maintainer>
+
+  <use>
+    <flag name='cupsddk'>Add support for <pkg>net-print/cupsddk</pkg> which 
+    enables dynamic PPD files (recommended)</flag>
+    <flag name='dbus'>Add support for <pkg>sys-apps/dbus</pkg> which enables 
+    better communications with your device (recommended)</flag>
+    <flag name='doc'>Build documentation</flag>
+    <flag name='fax'>Enable fax on multifunction devices which support it</flag>
+    <flag name='gtk'>Enable GTK+ dependencies, currently only the scanner GUI 
+    with USE=scanner.</flag>
+    <flag name='minimal'>Only build internal hpijs driver (not recommended at 
+    all, make sure you know what you are doing)</flag>
+    <flag name='parport'>Enable parallel port for devices which require 
+    it</flag>
+    <flag name='ppds'>Use precompiled PPD files (obsolete, use cupsddk 
+    instead)</flag>
+    <flag name='qt3'>Enable graphical interface using Qt 3 (recommended); when 
+    both qt3 and qt4 USE flags are enabled then qt3 is prioritary over 
+    qt4</flag>
+    <flag name='qt4'>Enable graphical interface using Qt 4 (experimental); when 
+    both qt3 and qt4 USE flags are enabled then qt3 is prioritary over 
+    qt4</flag>
+    <flag name='scanner'>Enable scanner on multifunction devices which support 
+    it </flag>
+    <flag name='snmp'>Add support for <pkg>net-analyzer/net-snmp</pkg> 
+    which enables this driver to work over networks (both for server and 
+    client)</flag>
+  </use>
+
+</pkgmetadata>

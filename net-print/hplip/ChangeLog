@@ -1,0 +1,510 @@
+# ChangeLog for net-print/hplip
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.112 2009/03/14 19:04:39 armin76 Exp $
+
+*hplip-3.9.2 (27 Mar 2009)
+
+  27 Mar 2009; Lars Tobias Borsting <larstobi@snota.no> hplip-3.9.2.ebuild:
+  Version bump.
+
+  14 Mar 2009; Raúl Porcel <armin76@gentoo.org> hplip-2.8.7.ebuild:
+  Add ~arm wrt #261391
+
+  18 Aug 2008; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
+  Added description for USE=gtk in metadata.
+
+  17 Aug 2008; Denis Dupeyron <calchan@gentoo.org> -hplip-2.7.10.ebuild,
+  -hplip-2.7.12.ebuild, -hplip-2.7.12-r1.ebuild, -hplip-2.8.2.ebuild,
+  -hplip-2.8.5.ebuild:
+  Cleanup.
+
+*hplip-2.8.7 (17 Aug 2008)
+
+  17 Aug 2008; Denis Dupeyron <calchan@gentoo.org> +hplip-2.8.7.ebuild:
+  Version bump, closing bugs #234153 and #234173.
+
+  15 Aug 2008; Denis Dupeyron <calchan@gentoo.org> hplip-2.8.6b.ebuild:
+  Fixed minor bug in debug output of device.py thanks to Gordon Malm.
+
+  12 Aug 2008; Brent Baude <ranger@gentoo.org> hplip-2.8.6b.ebuild:
+  Marking hplip-2.8.6b ppc stable.  Went direct to stable per security 
+  request in bug 233968.
+
+  07 Aug 2008; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
+  Implemented GLEP 56.
+
+  07 Aug 2008; Denis Dupeyron <calchan@gentoo.org> hplip-2.8.6b.ebuild:
+  Fixed hp-systray not starting up automatically with hp-toolbox, thanks to
+  Gordon Malm (see bug #233968).
+
+  06 Aug 2008; Markus Meier <maekke@gentoo.org> hplip-2.8.6b.ebuild:
+  amd64/x86 stable, bug #233968
+
+  05 Aug 2008; Markus Rothe <corsair@gentoo.org> hplip-2.8.6b.ebuild:
+  Stable on ppc64; bug #233968
+
+*hplip-2.8.6b (30 Jul 2008)
+
+  30 Jul 2008; Denis Dupeyron <calchan@gentoo.org> +hplip-2.8.6b.ebuild:
+  Version bump. Fixed bugs #223121, #223715 and #230913.
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> hplip-2.7.12-r1.ebuild:
+  python_mod_optimize is ROOT aware.
+
+  22 May 2008; Markus Rothe <corsair@gentoo.org> hplip-2.8.5.ebuild:
+  Added ~ppc64; bug #223043
+
+*hplip-2.8.5 (21 May 2008)
+
+  21 May 2008; Denis Dupeyron <calchan@gentoo.org> +hplip-2.8.5.ebuild:
+  Version bump, see bug #222329.
+
+*hplip-2.8.2 (04 Apr 2008)
+
+  04 Apr 2008; Denis Dupeyron <calchan@gentoo.org> +hplip-2.8.2.ebuild:
+  Version bump, bug #209641.
+
+  24 Mar 2008; Denis Dupeyron <calchan@gentoo.org> hplip-2.7.10.ebuild,
+  hplip-2.7.12.ebuild, hplip-2.7.12-r1.ebuild:
+  Fixed kernel checks, thanks to Petteri Räty (bug #210890).
+
+  14 Jan 2008; Denis Dupeyron <calchan@gentoo.org> hplip-2.7.10.ebuild,
+  hplip-2.7.12.ebuild, hplip-2.7.12-r1.ebuild:
+  Moved the part about avoiding collisions with cups-1.2 symlinks from
+  pkg_setup() to pkg_preinst() so that a compilation failure doesn't result in
+  changes to the filesystem. Thanks to Donnie Berkholz.
+
+*hplip-2.7.12-r1 (13 Jan 2008)
+
+  13 Jan 2008; Denis Dupeyron <calchan@gentoo.org> +hplip-2.7.12-r1.ebuild:
+  Use python.eclass, thanks to Mart Raudsepp (bug #203669).
+
+  27 Dec 2007; Denis Dupeyron <calchan@gentoo.org>
+  -files/hplip-1.7.4a-subprocess_replacement.patch,
+  -files/hplip-2.7.9-subprocess_replacement.patch, -files/hplip.init.d,
+  -hplip-1.7.4a-r2.ebuild, -hplip-2.7.9-r1.ebuild:
+  Post-stabilization cleanup.
+
+  26 Dec 2007; Samuli Suominen <drac@gentoo.org> hplip-2.7.10.ebuild:
+  amd64 stable wrt #202916
+
+  24 Dec 2007; Brent Baude <ranger@gentoo.org> hplip-2.7.10.ebuild:
+  Marking hplip-2.7.10 ppc64 for bug 202916
+
+*hplip-2.7.12 (23 Dec 2007)
+
+  23 Dec 2007; Denis Dupeyron <calchan@gentoo.org> +hplip-2.7.12.ebuild:
+  Version bump, thanks to Francisco Lloret (bug #203095).
+
+  22 Dec 2007; Markus Meier <maekke@gentoo.org> hplip-2.7.10.ebuild:
+  x86 stable, bug #202916
+
+  22 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org> hplip-2.7.10.ebuild:
+  ppc stable, bug #202916
+
+*hplip-2.7.10 (19 Nov 2007)
+
+  19 Nov 2007; Denis Dupeyron <calchan@gentoo.org> +files/70-hpmud.rules,
+  +hplip-2.7.10.ebuild:
+  Version bump, bug #196795. Replaced udev rules, bug #197726.
+
+  18 Nov 2007; Denis Dupeyron <calchan@gentoo.org> hplip-2.7.9-r1.ebuild:
+  Fixed bug #193671 again.
+
+  23 Oct 2007; Denis Dupeyron <calchan@gentoo.org> hplip-1.7.4a-r2.ebuild,
+  hplip-2.7.9-r1.ebuild:
+  Fixed bug #196743, thanks to Renato Alves.
+
+  21 Oct 2007; Denis Dupeyron <calchan@gentoo.org> -hplip-1.7.4a-r1.ebuild:
+  Removed useless ebuild after stabilization due to bug #195565.
+
+  21 Oct 2007; Steve Dibb <beandog@gentoo.org> hplip-1.7.4a-r2.ebuild:
+  amd64 stable, bug 195565
+
+  20 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  hplip-1.7.4a-r2.ebuild:
+  ppc stable, bug #195565
+
+  19 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  hplip-1.7.4a-r2.ebuild:
+  stable x86, security bug 195565
+
+*hplip-1.7.4a-r2 (18 Oct 2007)
+
+  18 Oct 2007; Denis Dupeyron <calchan@gentoo.org>
+  +files/hplip-1.7.4a-subprocess_replacement.patch, -hplip-1.6.10.ebuild,
+  +hplip-1.7.4a-r2.ebuild:
+  Fixed bug #195565 for old 1.x branch. Fixed quoting.
+
+*hplip-2.7.9-r1 (18 Oct 2007)
+
+  18 Oct 2007; Denis Dupeyron <calchan@gentoo.org>
+  -files/hplip-2.7.7-udev-kernel.2.6.22.diff,
+  +files/hplip-2.7.9-subprocess_replacement.patch, -hplip-2.7.7-r3.ebuild,
+  -hplip-2.7.9.ebuild, +hplip-2.7.9-r1.ebuild:
+  Fixed bug #195565 for new 2.x branch. Fixed quoting.
+
+  10 Oct 2007; Stefan Schweizer <genstef@gentoo.org> hplip-2.7.9.ebuild:
+  Improve DEPEND-accuracy for jakub in bug 193671
+
+*hplip-2.7.9 (30 Sep 2007)
+
+  30 Sep 2007; Denis Dupeyron <calchan@gentoo.org> +hplip-2.7.9.ebuild:
+  Version bump. Reworked minimal installation to fix bug #193671, thanks to
+  Jakub Moc for his suggestions and Dan Ost for reporting and testing.
+
+*hplip-2.7.7-r3 (29 Sep 2007)
+
+  29 Sep 2007; Denis Dupeyron <calchan@gentoo.org> -hplip-2.7.7-r2.ebuild,
+  +hplip-2.7.7-r3.ebuild:
+  Fixed bug #194052, thanks to Dmitri Pogosian. Removed fix for bug #161926
+  which isn't necessary anymore.
+
+  20 Sep 2007; Denis Dupeyron <calchan@gentoo.org> -hplip-2.7.6.ebuild,
+  -hplip-2.7.7.ebuild:
+  Cleanup.
+
+*hplip-2.7.7-r2 (22 Aug 2007)
+
+  22 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
+  files/hplip-2.7.7-udev-kernel.2.6.22.diff, -hplip-2.7.7-r1.ebuild,
+  +hplip-2.7.7-r2.ebuild:
+  Changed ATTR to ATTRS to also make it back working with old
+  usb-kernel-interface, Bug #186906.
+
+*hplip-2.7.7-r1 (21 Aug 2007)
+
+  21 Aug 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/hplip-2.7.7-udev-kernel.2.6.22.diff, +hplip-2.7.7-r1.ebuild:
+  Updated udev rules, to work with kernel 2.6.22. This uses new udev-syntax,
+  so block versions before udev-114, Bug #186906.
+
+*hplip-2.7.7 (08 Aug 2007)
+
+  08 Aug 2007; Stefan Schweizer <genstef@gentoo.org> +hplip-2.7.7.ebuild:
+  version bump thanks to Paul Bredbury <brebs@sent.com> in bug 187530
+
+  28 Jul 2007; Denis Dupeyron <calchan@gentoo.org> hplip-2.7.6.ebuild:
+  Added einfo about the init script not being used anymore, thanks to Heiko
+  Baums (bug #186575).
+
+  25 Jul 2007; Denis Dupeyron <calchan@gentoo.org> hplip-2.7.6.ebuild:
+  Fixed bug #161926, thanks to Daniel Klaffenbach, Tom Dexter and Francisco
+  Lloret.
+
+  25 Jul 2007; Denis Dupeyron <calchan@gentoo.org> hplip-2.7.6.ebuild:
+  Updated post-install info before unmasking the new release.
+
+*hplip-2.7.6 (21 Jul 2007)
+
+  21 Jul 2007; Denis Dupeyron <calchan@gentoo.org> +hplip-2.7.6.ebuild:
+  Major version bump.
+
+  16 Jun 2007; Denis Dupeyron <calchan@gentoo.org> -hplip-1.7.3.ebuild,
+  -hplip-1.7.4.ebuild, -hplip-1.7.4a.ebuild:
+  Post-stabilization cleanup. Kept version 1.6.10 due to bug #161926.
+
+  11 Jun 2007; Daniel Gryniewicz <dang@gentoo.org> hplip-1.7.4a-r1.ebuild:
+  Marked stable on amd64 for bug #181108
+
+  10 Jun 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  hplip-1.7.4a-r1.ebuild:
+  ppc stable, bug #181108
+
+  07 Jun 2007; Markus Rothe <corsair@gentoo.org> hplip-1.7.4a-r1.ebuild:
+  Added ~ppc64
+
+  07 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  hplip-1.7.4a-r1.ebuild:
+  stable x86, bug 181108
+
+*hplip-1.7.4a-r1 (01 May 2007)
+
+  01 May 2007; Denis Dupeyron <calchan@gentoo.org> +hplip-1.7.4a-r1.ebuild:
+  Fixed bug #172341.
+
+*hplip-1.7.4a (27 Apr 2007)
+
+  27 Apr 2007; Denis Dupeyron <calchan@gentoo.org> metadata.xml,
+  +hplip-1.7.4a.ebuild:
+  Version bump. Added fax and parport local USE flags. Dependency cleanups.
+
+*hplip-1.7.4 (23 Apr 2007)
+
+  23 Apr 2007; Marcelo Goes <vanquirius@gentoo.org> +hplip-1.7.4.ebuild:
+  1.7.4 version bump.
+
+  07 Apr 2007; Stefan Schweizer <genstef@gentoo.org> hplip-1.7.3.ebuild:
+  Add information about qt3 useflag needed thanks to Matthew Schultz
+  <mattsch@gmail.com> in bug 173389
+
+  27 Mar 2007; <genstef@gentoo.org> hplip-1.6.10.ebuild, hplip-1.7.3.ebuild:
+  Add missing cups to IUSE thanks to Pacho Ramos
+  <pacho@condmat1.ciencias.uniovi.es> in bug 172038
+
+  25 Mar 2007; Marcelo Goes <vanquirius@gentoo.org> -hplip-0.9.7-r3.ebuild:
+  Remove old ebuild.
+
+  25 Mar 2007; Tobias Scherbaum <dertobi123@gentoo.org> hplip-1.6.10.ebuild:
+  Stable on ppc wrt bug #158911.
+
+*hplip-1.7.3 (24 Mar 2007)
+
+  24 Mar 2007; Marcelo Goes <vanquirius@gentoo.org> -hplip-1.7.2.ebuild,
+  +hplip-1.7.3.ebuild:
+  1.7.3 version bump. Fixes scanning problem in bug 161926. Thanks to direx
+  <jean-jaques at women-at-work dot org>, jim stead <jstead1 at twcny dot rr
+  dot com> and others.
+
+  17 Mar 2007; Steve Dibb <beandog@gentoo.org> hplip-1.6.10.ebuild:
+  amd64 stable, bug 158911
+
+  04 Mar 2007; <genstef@gentoo.org> hplip-1.7.2.ebuild:
+  Correct DEPEND, bug 168179
+
+*hplip-1.7.2 (03 Mar 2007)
+
+  03 Mar 2007; Marcelo Goes <vanquirius@gentoo.org>
+  -files/hplip-1.7.1-1.patch, -hplip-1.6.12.ebuild, -hplip-1.7.1.ebuild,
+  +hplip-1.7.2.ebuild:
+  1.7.2 version bump, remove old ebuilds. Note that this does not fix the SANE
+  problem.
+
+  26 Feb 2007; Christian Faulhammer <opfer@gentoo.org> hplip-1.6.10.ebuild:
+  stable x86; bug 158911
+
+  24 Feb 2007; Marcelo Goes <vanquirius@gentoo.org> +hplip-1.6.10.ebuild:
+  Re-adding hplip-1.6.10 since scanning is broken with newer versions. This is
+  a workaround for bug 161926. Thanks to direx <jean-jaques at women-at-work
+  dot org>, Francisco Lloret <fcolloret at terra dot es> and jim stead
+  <jstead1 at twcny dot rr dot com>. Versions 1.6.12 and 1.7.1 will be kept
+  masked until the scanning problem is sorted out.
+
+*hplip-1.7.1 (19 Feb 2007)
+
+  19 Feb 2007; <genstef@gentoo.org> +files/hplip-1.7.1-1.patch,
+  +hplip-1.7.1.ebuild:
+  Version bump, thanks to Francisco Lloret <fcolloret@terra.es> in bug 163738
+
+*hplip-1.6.12 (07 Jan 2007)
+
+  07 Jan 2007; <genstef@gentoo.org> -hplip-1.6.10.ebuild,
+  +hplip-1.6.12.ebuild:
+  version bump thanks to Francisco Lloret <fcolloret@terra.es> in bug 158909
+
+  28 Nov 2006; Stefan Schweizer <genstef@gentoo.org> hplip-1.6.10.ebuild:
+  fully fix bug 150801
+
+  26 Nov 2006; Stefan Schweizer <genstef@gentoo.org> hplip-1.6.10.ebuild:
+  Add missing cp, thanks jakub in bug 150801
+
+*hplip-1.6.10 (20 Oct 2006)
+
+  20 Oct 2006; Stefan Schweizer <genstef@gentoo.org> -hplip-1.6.9.ebuild,
+  +hplip-1.6.10.ebuild:
+  version bump thanks to Francisco Lloret <fcolloret@terra.es> in bug 152139
+  and fix san dll.conf thanks to rob miller <rob@janerob.com> in bug 150801
+
+  23 Sep 2006; Stefan Schweizer <genstef@gentoo.org> hplip-1.6.9.ebuild:
+  Fix get_libdir thanks to Georgi Georgiev <chutz@gg3.net> in bug 148732
+
+*hplip-1.6.9 (22 Sep 2006)
+
+  22 Sep 2006; Stefan Schweizer <genstef@gentoo.org> -hplip-1.6.6a.ebuild,
+  -hplip-1.6.7.ebuild, +hplip-1.6.9.ebuild:
+  version bump thanks to Francisco Lloret <fcolloret@terra.es> and Tom Simnett
+  <tomsimnett@yahoo.co.uk> in bug 148393
+
+*hplip-1.6.7 (16 Aug 2006)
+
+  16 Aug 2006; Stefan Schweizer <genstef@gentoo.org> +hplip-1.6.7.ebuild:
+  version bump thanks to Francisco Lloret <fcolloret@terra.es> and Eric
+  Thibodeau <kyron@neuralbs.com> in bug 143551
+
+  05 Aug 2006; Stefan Schweizer <genstef@gentoo.org> hplip-0.9.7-r3.ebuild,
+  hplip-1.6.6a.ebuild:
+  Depend on hotplug-base instead of hotplug thanks to Heiko Baums
+  <heiko@baums-on-web.de> in bug 142604
+
+*hplip-1.6.6a (20 Jul 2006)
+
+  20 Jul 2006; Stefan Schweizer <genstef@gentoo.org> -hplip-1.6.6.ebuild,
+  -hplip-1.6.6-r1.ebuild, +hplip-1.6.6a.ebuild:
+  bump the foomatic-db, properly name 1.6.6a
+
+*hplip-1.6.6-r1 (01 Jul 2006)
+
+  01 Jul 2006; Marcelo Goes <vanquirius@gentoo.org> -hplip-0.9.8-r2.ebuild,
+  -hplip-0.9.11-r1.ebuild, +hplip-1.6.6-r1.ebuild:
+  1.6.6-r1 version bump - use 1.6.6a tarball from upstream. Also, cleaning up
+  old ebuilds.
+
+  24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> hplip-0.9.7-r3.ebuild,
+  hplip-0.9.8-r2.ebuild, hplip-0.9.11-r1.ebuild, hplip-1.6.6.ebuild:
+  USE flag change qt->qt3/qt4 bug #137785
+
+  17 Jun 2006; Stefan Schweizer <genstef@gentoo.org> hplip-1.6.6.ebuild:
+  cups-1.2 fixes and major ebuild cleanups
+
+*hplip-1.6.6 (16 Jun 2006)
+
+  16 Jun 2006; Marcelo Goes <vanquirius@gentoo.org> +hplip-1.6.6.ebuild:
+  1.6.6 version bump. Fixes bug 136937, reported by Kenton Groombridge
+  <kenton.groombridge at us.army dot mil>.
+
+  04 Jun 2006; Stefan Schweizer <genstef@gentoo.org> hplip-0.9.7-r3.ebuild,
+  hplip-0.9.8-r2.ebuild, -hplip-0.9.9.ebuild, -hplip-0.9.10-r1.ebuild,
+  hplip-0.9.11-r1.ebuild:
+  Change foomatic depend to foomatic-db-engine and remove unused ebuilds
+
+*hplip-0.9.11-r1 (03 Jun 2006)
+
+  03 Jun 2006; Marcelo Goes <vanquirius@gentoo.org> -hplip-0.9.11.ebuild,
+  +hplip-0.9.11-r1.ebuild:
+  Add patch from upstream to 0.9.11.
+
+*hplip-0.9.11 (14 May 2006)
+
+  14 May 2006; Marcelo Goes <vanquirius@gentoo.org> +hplip-0.9.11.ebuild:
+  0.9.11 version bump. Updated HOMEPAGE and SRC_URI. Thanks to genstef for
+  letting me know of the bump.
+
+  23 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> hplip-0.9.7-r3.ebuild,
+  hplip-0.9.8-r2.ebuild, hplip-0.9.9.ebuild, hplip-0.9.10-r1.ebuild:
+  Make net-print/cups a hard dependency for bug 130871, reported by Martin
+  <martinsw at linux-net dot dnsalias dot net>.
+
+*hplip-0.9.10-r1 (23 Apr 2006)
+
+  23 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> -hplip-0.9.10.ebuild,
+  +hplip-0.9.10-r1.ebuild:
+  Add 0.9.10-2 patch from upstream.
+
+  05 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> hplip-0.9.9.ebuild,
+  hplip-0.9.10.ebuild:
+  Attempting to fix bug 126256 - hplip-0.9.9 does not work with foomatic/hpijs
+  drivers and cups. Thanks to Peter Hjalmarsson <xake at telia dot com> for
+  his suggestion.
+
+*hplip-0.9.10 (01 Apr 2006)
+
+  01 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> hplip-0.9.9.ebuild,
+  +hplip-0.9.10.ebuild:
+  0.9.10 version bump. Kill usb USE flag for bug 126337 and make libusb and
+  hotplug hardcoded dependencies, as they are no longer optional.
+  Thanks to Bouvard Patrice <pabou at swing dot be>.
+
+*hplip-0.9.9 (12 Mar 2006)
+
+  12 Mar 2006; Marcelo Goes <vanquirius@gentoo.org> +hplip-0.9.9.ebuild:
+  0.9.9 version bump.
+
+*hplip-0.9.8-r2 (24 Feb 2006)
+
+  24 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> -hplip-0.9.8-r1.ebuild,
+  +hplip-0.9.8-r2.ebuild:
+  Update upstream patch to 0.9.8-4.
+
+  17 Feb 2006; Simon Stelling <blubb@gentoo.org> hplip-0.9.7-r3.ebuild:
+  stable on amd64
+
+  14 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> hplip-0.9.7-r3.ebuild,
+  hplip-0.9.8-r1.ebuild:
+  Do not install desktop entry if qt USE flag is not set for bug 122758.
+  Thanks to Darcy <darcydot parks at gmail dot com>.
+
+*hplip-0.9.8-r1 (11 Feb 2006)
+
+  11 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> -hplip-0.9.8.ebuild,
+  +hplip-0.9.8-r1.ebuild:
+  Add 0.9.8-3 patch from upstream, update foomatic-db-hpijs version.
+
+*hplip-0.9.8 (06 Feb 2006)
+
+  06 Feb 2006; Marcelo Goes <vanquirius@gentoo.org> +hplip-0.9.8.ebuild:
+  0.9.8 version bump.
+
+  25 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> hplip-0.9.7-r3.ebuild:
+  Mark 0.9.7-r3 x86 stable.
+
+  24 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> -hplip-0.9.5.ebuild,
+  hplip-0.9.7-r3.ebuild:
+  Use newinitd instead of exeinto, newexe.
+
+  21 Jan 2006; Lars Weiler <pylon@gentoo.org> hplip-0.9.7-r3.ebuild:
+  Stable on ppc; Bug #112425.
+
+*hplip-0.9.7-r3 (19 Jan 2006)
+
+  19 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> -hplip-0.9.7-r2.ebuild,
+  +hplip-0.9.7-r3.ebuild:
+  Add net-print/foomatic-filters to RDEPEND for bug 94368. Thanks to Jakub
+  Kocourek <jakub dot kocourek at gmail dot com> and others.
+
+  15 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> -hplip-0.9.3.ebuild,
+  -hplip-0.9.4.ebuild, hplip-0.9.7-r2.ebuild:
+  Take my devspace out of SRC_URI, remove old ebuilds.
+
+*hplip-0.9.7-r2 (14 Jan 2006)
+
+  14 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> -hplip-0.9.7-r1.ebuild,
+  +hplip-0.9.7-r2.ebuild:
+  Do not install qt applications with USE=-qt. Fixes bug 106035. Thanks to
+  Chris White <chriswhite at gentoo dot org> and others.
+
+  14 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> files/hplip.init.d:
+  Add Alex Rostovtsev <tetromino at gmail dot com>'s init fix for bug 97033.
+  Thanks to all bug participants.
+
+*hplip-0.9.7-r1 (14 Jan 2006)
+
+  14 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> -hplip-0.9.7.ebuild,
+  +hplip-0.9.7-r1.ebuild:
+  Add python fix for bug 98428, thanks to Sridhar Dhanapalan <lists dot
+  sridhar at dhanapalan dot com>, William Keaney <keaneyw at gmail dot com>,
+  boris faure <billiob at gmail dot com> and others. Add upstream patch for
+  bug 116952, thanks to Keri Harris <harriskeri at mcs dot vuw dot ac dot nz>.
+
+  04 Dec 2005; Marcelo Goes <vanquirius@gentoo.org> hplip-0.9.7.ebuild:
+  Use mirrors to host foomatic-db-hpijs tarball. This should fix bug 114033,
+  reported by Jason Arndt <jarndt196 at yahoo dot com>.
+
+*hplip-0.9.7 (26 Nov 2005)
+
+  26 Nov 2005; Marcelo Goes <vanquirius@gentoo.org> +hplip-0.9.7.ebuild:
+  0.9.7 version bump.
+
+  16 Nov 2005; Luca Barbato <lu_zero@gentoo.org> hplip-0.9.5.ebuild:
+  Fix big endian error
+
+  25 Sep 2005; Luis Medinas <metalgod@gentoo.org> hplip-0.9.5.ebuild:
+  Update to the latest foomatic-db-hpijs snapshot.
+
+*hplip-0.9.5 (25 Sep 2005)
+
+  25 Sep 2005; Luis Medinas <metalgod@gentoo.org> +hplip-0.9.5.ebuild:
+  Version bump
+
+  03 Aug 2005; David Holm <dholm@gentoo.org> hplip-0.9.4.ebuild:
+  Added to ~ppc.
+
+*hplip-0.9.4 (02 Aug 2005)
+
+  02 Aug 2005; <metalgod@gentoo.org> +hplip-0.9.4.ebuild:
+  Version Bump
+
+  28 Jul 2005; Caleb Tennis <caleb@gentoo.org> hplip-0.9.3.ebuild:
+  Fix qt dep per bug #100235
+
+  05 Jul 2005; Sven Wegener <swegener@gentoo.org> hplip-0.9.3.ebuild:
+  QA: Added cups and usb to IUSE.
+
+  07 Jun 2005; Sven Wegener <swegener@gentoo.org> hplip-0.9.3.ebuild:
+  Fixed invalid atoms in *DEPEND. Use scanner? once in *DEPEND.
+
+*hplip-0.9.3 (07 Jun 2005)
+
+  07 Jun 2005; Heinrich Wendel <lanius@gentoo.org> +metadata.xml,
+  +hplip-0.9.3.ebuild:
+  initial import, bug #73709
+
